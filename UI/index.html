@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>WeatherX — Beautiful Forecasts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-idle">
+  <!-- Background gradient canvas via CSS only -->
+  <div class="bg-aurora"></div>
+
+  <main class="app">
+    <header class="brand">
+      <div class="logo">☁️</div>
+      <h1>WeatherX</h1>
+      <p class="tag">Clean • Fast • Beautiful</p>
+    </header>
+
+    <!-- Search / Controls -->
+    <form id="weatherForm" class="controls" autocomplete="off">
+      <div class="input-group">
+        <input id="cityInput" type="text" placeholder="Enter city (e.g., Goa)" aria-label="City" />
+        <input id="daysInput" type="number" min="1" max="7" placeholder="Days 1–7" aria-label="Days" />
+      </div>
+      <button type="submit" class="btn-primary">Get Forecast</button>
+    </form>
+
+    <!-- Messages -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- Content -->
+    <section id="contentArea" class="content">
+      <!-- Empty state -->
+      <div id="emptyState" class="empty">
+        <div class="empty-illustration">🌍</div>
+        <h2>Search a city to begin</h2>
+        <p>Type a city and choose days (1–7).</p>
+      </div>
+
+      <!-- Skeleton while loading -->
+      <div id="skeleton" class="skeleton hidden">
+        <div class="card current">
+          <div class="row">
+            <div class="sk sk-title"></div>
+            <div class="sk sk-sub"></div>
+          </div>
+          <div class="row">
+            <div class="sk sk-temp"></div>
+          </div>
+        </div>
+        <div class="forecast">
+          <div class="sk sk-chip"></div>
+          <div class="sk sk-chip"></div>
+          <div class="sk sk-chip"></div>
+          <div class="sk sk-chip"></div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="results" class="hidden">
+        <article class="card current">
+          <div class="current-top">
+            <div>
+              <h2 id="loc"></h2>
+              <p id="cond"></p>
+            </div>
+            <div class="current-meta">
+              <div id="condEmoji" class="emoji">⛅</div>
+              <div class="temp-wrap">
+                <span id="temp" class="temp">--</span><span class="deg">°C</span>
+              </div>
+            </div>
+          </div>
+          <div id="metaLine" class="meta-line"></div>
+        </article>
+
+        <section class="forecast">
+          <h3 class="section-title">Next days</h3>
+          <div id="forecastRow" class="forecast-row"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Built with ❤️ by Yash Shelar</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
