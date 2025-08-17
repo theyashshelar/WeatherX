@@ -17,10 +17,10 @@ It fetches real-time weather data (current & forecast) using a backend API built
 
 🖼️ Screenshots:
 Home Page:
-![Weather App Screenshot](assests/WeatherX-Homepage.png)
+![Weather App Screenshot](assets/WeatherX-Homepage.png)
 
 Forecast View:
-![Forecast Screenshot](assests/WeatherX-Searchpage.png)  
+![Forecast Screenshot](assets/WeatherX-Searchpage.png)  
 
 ---
 
