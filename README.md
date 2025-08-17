@@ -46,9 +46,6 @@ Forecast View:
     API will run at http://localhost:8080/weather.
 
 
-🌐 Live Demo:
-https://theyashshelar.github.io/weather-app/
-
 📌 Future Enhancements:
 🌙 Dark mode toggle
 🗺️ Show weather on an interactive map
